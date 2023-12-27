@@ -1,0 +1,57 @@
+[
+    {
+        "monthName": "January",
+        "start": "1672531200000",
+        "end": "1675123200000"
+    },
+    {
+        "monthName": "February",
+        "start": "1675209600000",
+        "end": "1677542400000"
+    },
+    {
+        "monthName": "March",
+        "start": "1677628800000",
+        "end": "1680220800000"
+    },
+    {
+        "monthName": "April",
+        "start": "1680307200000",
+        "end": "1682812800000"
+    },
+    {
+        "monthName": "May",
+        "start": "1682899200000",
+        "end": "1685491200000"
+    },
+    {
+        "monthName": "June",
+        "start": "1685577600000",
+        "end": "1688083200000"
+    },
+    {
+        "monthName": "July",
+        "start": "1688169600000",
+        "end": "1690761600000"
+    },
+    {
+        "monthName": "August",
+        "start": "1690848000000",
+        "end": "1693440000000"
+    },
+    {
+        "monthName": "September",
+        "start": "1693526400000",
+        "end": "1696032000000"
+    },
+    {
+        "monthName": "October",
+        "start": "1696118400000",
+        "end": "1698710400000"
+    },
+    {
+        "monthName": "November",
+        "start": "1698796800000",
+        "end": "1701302400000"
+    }
+]

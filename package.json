@@ -1,0 +1,17 @@
+{
+  "name": "sgg-xmas-2024",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "fs": "^0.0.1-security",
+    "mongodb": "^6.3.0"
+  },
+  "keywords": [],
+  "description": ""
+}
