@@ -2,5 +2,3 @@ node_modules
 src/reports/combo-usage/24-12-scan
 .env
 .DS_Store
-/output/*/*.json
-/output/*.json
