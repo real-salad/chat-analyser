@@ -12,6 +12,21 @@ class LinkUsage extends Analyser {
 
     onMessage(message) {
 
+        if (message.nick === 'psrngafk' || 'Bot') return;
+        const { entities } = message;
+
+        if (!entities) return;
+        const { links } = entities;
+
+        if (!links) return;
+
+        if (!this.data[message.nick]) {
+            this.data[message.nick] = 0;
+        }
+
+        this.data[message.nick] ? this.data[message.nick] += 1 : 0;
+
+        this.data = this.formatData((a, b) => b[1] - a[1]);
         this.exportResults(`link-usage.json`);
     }
 

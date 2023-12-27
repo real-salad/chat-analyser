@@ -4,20 +4,23 @@ class Analyser {
     constructor() {
         this.data = {};
         this.outputDirectory = '';
-        
+
     }
 
     onMessage(message) { }
 
-    sortResults(results) {
-        let foo = Object.entries(results);
-        foo = foo.sort((a, b) => b[1] - a[1])
-        return Object.fromEntries(foo);
+    formatData(sortFunction) {
+        // sort data in descending order by # of tags
+        // give only the top 10 results
+        console.log(sortFunction)
+        return Object.fromEntries(Object.entries(this.data).sort(sortFunction).slice(0, 9));
     }
 
     exportResults(name) {
         //
-        fs.writeFileSync(`output/${this.outputDirectory}${name}`, JSON.stringify(this.sortResults(this.data)))
+        console.log(this.data)
+
+        fs.writeFileSync(`output/${this.outputDirectory}${name}`, JSON.stringify())
     }
 }
 
