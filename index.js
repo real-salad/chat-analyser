@@ -3,7 +3,7 @@ const fs = require('fs')
 const Parser = require('./src/parser');
 const EmoteUsage = require('./src/reports/emote-usage');
 const ComboUsage = require('./src/reports/combo-usage');
-const months = require('./test-months.json');
+const months = require('./months.json');
 const AnonBedIndex = require('./src/reports/anon-bed-index');
 const RollUsage = require('./src/reports/roll-usage');
 const BillyCrewIndex = require('./src/reports/billy-crew');
@@ -33,9 +33,12 @@ async function queryAndWriteToJSON() {
     const messageMeta = new MessageMeta();
     const rollUsage = new RollUsage()
     const tagCount = new TagCount()
+    // check dir
+    // build report dir maker
+    fs.mkdir('output');
 
-    // const parser = new Parser([emoteUsage, comboUsage, anonBedIndex, rollUsage, billyCrewIndex, billysPerHourUsage, linkUsage, messageMeta])
-    const parser = new Parser([billysPerHourUsage])
+    const parser = new Parser([emoteUsage, comboUsage, anonBedIndex, rollUsage, billyCrewIndex, billysPerHourUsage, linkUsage, messageMeta, tagCount])
+    // const parser = new Parser([billysPerHourUsage])
     try {
         const client = await MongoClient.connect(dbURL, { auth: { username: dbUser, password: dbPass } });
         const db = client.db(dbName);

@@ -21,23 +21,22 @@ class RollUsage extends Analyser {
     onMessage(message) {
         const isBot = message.nick === 'Bot'
         if (!isBot) { this.storeMessage(message); return; }
+
         const hasRolled = message.data.includes('rolled')
         if (!hasRolled) { this.storeMessage(message); return; }
+
         if (!this.lastMessage) {
             this.lastMessage = message;
         }
 
-        const request = this.lastMessage.data.split(' ');
-        const results = message.data.split(' ');
+        const happyPath = /\d+d\d+/g
+        const otherPath = / \d+.+/g
+        const hasMod = message.data.indexOf('+')
+        let modAmount = 0;
+        if (hasMod >= 0) {
+            modAmount = Number(message.data.splice(hasMod + 1, message.data.length));
+        }
 
-        const seekResults = results.findIndex((ele) => ele === 'rolled');
-        const seekRequest = request.findIndex((ele) => ele === '!roll')
-
-        const requestDice = request[seekRequest + 1];
-        const resultUser = results[seekResults - 1];
-        const resultAmount = results[seekResults + 1];
-
-        this.data[resultUser] = { ...this.data[resultUser], [this.sanitizeRequestDice(requestDice)]: resultAmount }
 
         this.lastMessage = message
         this.exportResults(`roll-usage.json`);

@@ -16,7 +16,7 @@ class Analyser {
     }
 
     exportResults(name) {
-        //
+
         fs.writeFileSync(`output/${this.outputDirectory}${name}`, JSON.stringify(this.data))
     }
 }

@@ -24,3 +24,9 @@ const months = require('./test-months.json');
 ```
 
 to run analysis for January & February only.
+
+# report output
+
+top ten emotes: not much viz
+anything wanting a graph: output to CSV
+graphs in excel sheet 1 / paste in new data
