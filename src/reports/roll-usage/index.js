@@ -23,7 +23,7 @@ class RollUsage extends Analyser {
             console.log(this.rollData)
         }
 
-        // this.exportResults(`${month}-emote-usage.json`);
+        this.exportResults(`roll-usage.json`);
     }
 
 }

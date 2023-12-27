@@ -15,7 +15,7 @@ class Analyser {
 
     exportResults(name) {
         //
-        fs.writeFileSync(name, JSON.stringify(this.sortResults(this.data)))
+        fs.writeFileSync(`output/${name}`, JSON.stringify(this.sortResults(this.data)))
     }
 }
 

@@ -19,7 +19,7 @@ class EmoteUsage extends Analyser {
             this.data[emote.name] += 1;
         })
 
-        this.exportResults(`${month}-emote-usage.json`);
+        this.exportResults(`emotes/${month}-emote-usage.json`);
     }
 
 }

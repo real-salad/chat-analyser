@@ -22,7 +22,7 @@ async function queryAndWriteToJSON() {
     const comboUsage = new ComboUsage();
     const anonBedIndex = new AnonBedIndex();
     const rollUsage = new RollUsage()
-    const parser = new Parser([emoteUsage, comboUsage, anonBedIndex, rollUsage])
+    const parser = new Parser([emoteUsage, /*comboUsage, anonBedIndex, rollUsage*/])
 
     try {
         const client = await MongoClient.connect(dbURL, { auth: { username: dbUser, password: dbPass } });
