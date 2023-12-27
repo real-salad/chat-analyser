@@ -6,6 +6,10 @@ const ComboUsage = require('./src/reports/combo-usage');
 const months = require('./test-months.json');
 const AnonBedIndex = require('./src/reports/anon-bed-index');
 const RollUsage = require('./src/reports/roll-usage');
+const BillyCrewIndex = require('./src/reports/billy-crew');
+const BillyPerHourUsage = require('./src/reports/billys-per-hour');
+const LinkUsage = require('./src/reports/links');
+const MessageMeta = require('./src/reports/message-meta');
 
 // MongoDB connection credentials
 require('dotenv').config()
@@ -19,11 +23,16 @@ const dbURL = `mongodb://${dbUser}:${dbPass}@${url}:${port}/${dbName}`;
 
 // Function to query MongoDB and write results to a JSON file
 async function queryAndWriteToJSON() {
-    const emoteUsage = new EmoteUsage();
-    const comboUsage = new ComboUsage();
     const anonBedIndex = new AnonBedIndex();
+    const billyCrewIndex = new BillyCrewIndex();
+    const billysPerHourUsage = new BillyPerHourUsage();
+    const comboUsage = new ComboUsage();
+    const emoteUsage = new EmoteUsage();
+    const linkUsage = new LinkUsage();
+    const messageMeta = new MessageMeta();
     const rollUsage = new RollUsage()
-    const parser = new Parser([emoteUsage, comboUsage, anonBedIndex, rollUsage])
+
+    const parser = new Parser([emoteUsage, comboUsage, anonBedIndex, rollUsage, billyCrewIndex, billysPerHourUsage, linkUsage, messageMeta])
 
     try {
         const client = await MongoClient.connect(dbURL, { auth: { username: dbUser, password: dbPass } });
