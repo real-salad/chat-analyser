@@ -3,6 +3,7 @@ const fs = require('fs');
 class Analyser {
     constructor() {
         this.data = {};
+        this.outputDirectory = '';
     }
 
     onMessage(message) { }
@@ -15,7 +16,7 @@ class Analyser {
 
     exportResults(name) {
         //
-        fs.writeFileSync(`output/${name}`, JSON.stringify(this.sortResults(this.data)))
+        fs.writeFileSync(`output/${this.outputDirectory}${name}`, JSON.stringify(this.sortResults(this.data)))
     }
 }
 

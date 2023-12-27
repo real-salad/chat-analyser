@@ -16,6 +16,7 @@ class AnonBedIndex extends Analyser {
         this.lastProcessedDay = null;
         this.foundFooToday = false;
         this.foundBedtimeToday = false;
+        this.outputDirectory = 'anon-bed-index/'
     }
 
     onMessage(message) {

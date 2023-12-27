@@ -6,6 +6,7 @@ class BillyPerHourUsage extends Analyser {
 
     constructor() {
         super();
+        this.outputDirectory = 'billys-per-hour/'
     }
 
     onMessage(message) {

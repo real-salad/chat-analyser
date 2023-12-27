@@ -3,6 +3,7 @@ const Analyser = require('../../analyser')
 class ComboUsage extends Analyser {
     constructor() {
         super();
+        this.outputDirectory = 'combos/'
         this.lastMessage = null
         this.comboCounter = {}
         this.isFirstFlag = false;

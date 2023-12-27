@@ -7,6 +7,7 @@ class LinkUsage extends Analyser {
 
     constructor() {
         super();
+        this.outputDirectory = 'links/'
     }
 
     onMessage(message) {

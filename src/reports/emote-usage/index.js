@@ -4,6 +4,7 @@ class EmoteUsage extends Analyser {
 
     constructor() {
         super();
+        this.outputDirectory = 'emotes/'
     }
 
     onMessage(message, month) {
@@ -19,7 +20,7 @@ class EmoteUsage extends Analyser {
             this.data[emote.name] += 1;
         })
 
-        this.exportResults(`emotes/${month}-emote-usage.json`);
+        this.exportResults(`${month}-emote-usage.json`);
     }
 
 }

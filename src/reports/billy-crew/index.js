@@ -6,6 +6,7 @@ class BillyCrewIndex extends Analyser {
 
     constructor() {
         super();
+        this.outputDirectory = 'billy-crew/'
     }
 
     onMessage(message) {

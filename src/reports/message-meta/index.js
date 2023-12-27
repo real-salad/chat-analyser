@@ -7,6 +7,7 @@ class MessageMeta extends Analyser {
 
     constructor() {
         super();
+        this.outputDirectory = 'message-meta/'
     }
 
     onMessage(message) {

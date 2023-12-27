@@ -4,6 +4,7 @@ class RollUsage extends Analyser {
 
     constructor() {
         super();
+        this.outputDirectory = 'rolls/'
         this.lastMessage = null;
         this.rollData = null;
     }
