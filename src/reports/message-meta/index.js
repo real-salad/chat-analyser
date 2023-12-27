@@ -12,7 +12,7 @@ class MessageMeta extends Analyser {
 
     onMessage(message) {
 
-        // this.exportResults(`message-meta.json`);
+        this.exportResults(`message-meta.json`);
     }
 
 }

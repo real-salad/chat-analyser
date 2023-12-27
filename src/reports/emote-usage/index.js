@@ -4,7 +4,7 @@ class EmoteUsage extends Analyser {
 
     constructor() {
         super();
-        this.outputDirectory = 'emotes/'
+        this.outputDirectory = 'emote-usage/'
     }
 
     onMessage(message, month) {

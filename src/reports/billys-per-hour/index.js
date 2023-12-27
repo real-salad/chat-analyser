@@ -11,7 +11,7 @@ class BillyPerHourUsage extends Analyser {
 
     onMessage(message) {
 
-        // this.exportResults(`link-usage.json`);
+        this.exportResults(`billys-per-hour-usage.json`);
     }
 
 }

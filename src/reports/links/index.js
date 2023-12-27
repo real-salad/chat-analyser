@@ -12,7 +12,7 @@ class LinkUsage extends Analyser {
 
     onMessage(message) {
 
-        // this.exportResults(`link-usage.json`);
+        this.exportResults(`link-usage.json`);
     }
 
 }

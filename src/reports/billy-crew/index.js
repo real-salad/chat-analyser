@@ -11,7 +11,7 @@ class BillyCrewIndex extends Analyser {
 
     onMessage(message) {
 
-        // this.exportResults(`link-usage.json`);
+        this.exportResults(`billy-crew-index.json`);
     }
 
 }
