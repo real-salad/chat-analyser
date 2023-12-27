@@ -37,7 +37,6 @@ async function queryAndWriteToJSON() {
 
             const queryResults = await collection.find(query).toArray();
             console.log(`${monthName}: ${queryResults.length} results found`)
-            fs.writeFileSync('anon.json', JSON.stringify(queryResults))
 
             queryResults.forEach((message) => {
                 parser.processMessage(message, monthName)
