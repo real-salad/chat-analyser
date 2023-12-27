@@ -5,6 +5,10 @@ npm i
 npm run start
 ```
 
+# usage
+
+
+
 # about
 
 Each `report` implements the `onMessage` function of the `Analyser` base class.
