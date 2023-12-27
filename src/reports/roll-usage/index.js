@@ -8,7 +8,7 @@ class RollUsage extends Analyser {
         this.rollData = null;
     }
 
-    onMessage(message, month) {
+    onMessage(message) {
 
         if (!this.lastMessage) {
             this.lastMessage = message;
