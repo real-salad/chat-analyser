@@ -10,6 +10,7 @@ const BillyCrewIndex = require('./src/reports/billy-crew');
 const BillyPerHourUsage = require('./src/reports/billys-per-hour');
 const LinkUsage = require('./src/reports/links');
 const MessageMeta = require('./src/reports/message-meta');
+const TagCount = require('./src/tag-count');
 
 // MongoDB connection credentials
 require('dotenv').config()
@@ -31,9 +32,10 @@ async function queryAndWriteToJSON() {
     const linkUsage = new LinkUsage();
     const messageMeta = new MessageMeta();
     const rollUsage = new RollUsage()
+    const tagCount = new TagCount()
 
     // const parser = new Parser([emoteUsage, comboUsage, anonBedIndex, rollUsage, billyCrewIndex, billysPerHourUsage, linkUsage, messageMeta])
-    const parser = new Parser([rollUsage])
+    const parser = new Parser([messageMeta, tagCount])
     try {
         const client = await MongoClient.connect(dbURL, { auth: { username: dbUser, password: dbPass } });
         const db = client.db(dbName);
