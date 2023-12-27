@@ -4,6 +4,7 @@ class Parser {
     }
 
     processMessage(message, month) {
+        
         this.runAnalysis(message, month)
     }
 

@@ -9,21 +9,21 @@ class RollUsage extends Analyser {
         this.rollData = null;
     }
 
-    onMessage(message) {
+    storeMessage(message) {
+        this.lastMessage = message
+    }
 
+    onMessage(message) {
+        const isBot = message.nick === 'Bot'
+        if (!isBot) { this.storeMessage(message); return; }
+        const hasRolled = message.data.includes('rolled')
+        if (!hasRolled) { this.storeMessage(message); return; }
         if (!this.lastMessage) {
             this.lastMessage = message;
         }
-        const isBot = message.nick
-        if (!isBot) return;
+        console.log(this.lastMessage.data, message.data)
 
-        const isRoll = message.data.includes('!roll');
-
-        if (isRoll) {
-            this.rollData = this.lastMessage.data;
-            console.log(this.rollData)
-        }
-
+        this.lastMessage = message
         this.exportResults(`roll-usage.json`);
     }
 

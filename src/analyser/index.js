@@ -4,6 +4,7 @@ class Analyser {
     constructor() {
         this.data = {};
         this.outputDirectory = '';
+        
     }
 
     onMessage(message) { }
