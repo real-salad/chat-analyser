@@ -35,7 +35,7 @@ async function queryAndWriteToJSON() {
     const tagCount = new TagCount()
 
     // const parser = new Parser([emoteUsage, comboUsage, anonBedIndex, rollUsage, billyCrewIndex, billysPerHourUsage, linkUsage, messageMeta])
-    const parser = new Parser([linkUsage])
+    const parser = new Parser([billysPerHourUsage])
     try {
         const client = await MongoClient.connect(dbURL, { auth: { username: dbUser, password: dbPass } });
         const db = client.db(dbName);
