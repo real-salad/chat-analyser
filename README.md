@@ -27,6 +27,10 @@ to run analysis for January & February only.
 
 # report output
 
-top ten emotes: not much viz
-anything wanting a graph: output to CSV
-graphs in excel sheet 1 / paste in new data
+top ten emotes: not much viz (top ten)
+message length:
+    do clustering to determine ranges of short  / medium / long
+    use these ranges to determine which category the user falls in
+    volume per category (user)
+    most long messages
+    on average which person posts the most in each category

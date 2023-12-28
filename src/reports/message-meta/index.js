@@ -17,6 +17,7 @@ class MessageMeta extends Analyser {
     }
 
     onMessage(message) {
+        // TODO
         // this could be top 10
         // most common message length > running average
         // check out some easy js lib solution
