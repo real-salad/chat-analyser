@@ -29,8 +29,8 @@ to run analysis for January & February only.
 
 top ten emotes: not much viz (top ten)
 message length:
-    do clustering to determine ranges of short  / medium / long
-    use these ranges to determine which category the user falls in
-    volume per category (user)
-    most long messages
-    on average which person posts the most in each category
+    - do clustering to determine ranges of short  / medium / long
+    - use these ranges to determine which category the user falls in
+    - volume per category (user)
+    - most long messages
+    - on average which person posts the most in each category
