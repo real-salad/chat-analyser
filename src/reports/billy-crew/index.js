@@ -1,4 +1,4 @@
-// how many messages has the cringe crew send without a weirdface
+// how many messages has the cringe crew sent without a weirdface
 
 const Analyser = require('../../analyser')
 
